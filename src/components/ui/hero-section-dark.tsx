@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
+
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: {
@@ -22,6 +23,7 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     darkLineColor?: string;
   };
 }
+
 const RetroGrid = ({
   angle = 65,
   cellSize = 60,
@@ -43,6 +45,7 @@ const RetroGrid = ({
       <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent to-90% dark:from-black" />
     </div>;
 };
+
 const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(({
   className,
   title = "Build products for everyone",
@@ -75,8 +78,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(({
               {/* Top tag with glass effect */}
               
               
-              {/* Main title with blue gradients - Extra Large */}
-              <h1 className="text-[1.25rem] md:text-[3.5rem] lg:text-[5.5rem] xl:text-[5.5rem] font-bold tracking-tight leading-tight">
+              {/* Main title with blue gradients - Updated mobile size to 35px */}
+              <h1 className="text-[35px] md:text-[3.5rem] lg:text-[5.5rem] xl:text-[5.5rem] font-bold tracking-tight leading-tight">
                 <span className="text-white">{title}</span>
                 <br />
                 <span className="text-white">{subtitle.regular}</span>
@@ -98,5 +101,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(({
         </section>
       </div>;
 });
+
 HeroSection.displayName = "HeroSection";
+
 export { HeroSection };
