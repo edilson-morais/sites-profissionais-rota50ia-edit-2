@@ -1,5 +1,7 @@
+
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const portfolioItems = [{
   title: "E-commerce Moderno",
   category: "Loja Virtual",
@@ -8,7 +10,7 @@ const portfolioItems = [{
 }, {
   title: "Clínica Médica",
   category: "Saúde",
-  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+  image: "/lovable-uploads/42ac3bb1-7537-437a-be0a-561ed5e99504.png",
   description: "Site institucional com sistema de agendamento online."
 }, {
   title: "Restaurante Gourmet",
@@ -31,6 +33,7 @@ const portfolioItems = [{
   image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop",
   description: "Portal imobiliário com busca avançada e tour virtual."
 }];
+
 export const Portfolio = () => {
   return <section id="portfolio" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
