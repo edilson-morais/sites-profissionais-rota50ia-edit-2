@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 26% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 26% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 26% 8%;
+
+    --secondary: 220 26% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 26% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 220 26% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 26% 18%;
+    --input: 220 26% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    /* Hero gradients and effects - Dark blue themes */
+    --gradient-hero-bg: radial-gradient(ellipse 40% 80% at 50% -20%, rgba(59, 130, 246, 0.15), rgba(0, 0, 0, 0.8));
+    --gradient-hero-bg-dark: radial-gradient(ellipse 40% 80% at 50% -20%, rgba(59, 130, 246, 0.25), rgba(0, 0, 0, 0.9));
+    --gradient-hero-text: linear-gradient(180deg, #1e293b 0%, rgba(0, 0, 0, 0.9) 100%);
+    --gradient-hero-text-dark: linear-gradient(180deg, #f8fafc 0%, rgba(59, 130, 246, 0.8) 202.08%);
+    --gradient-blue-purple: linear-gradient(135deg, #1e40af, #3b82f6, #6366f1);
+    --gradient-dark-blue: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    --gradient-conic-spin: conic-gradient(from 90deg at 50% 50%, #3b82f6 0%, #1e40af 50%, #3b82f6 100%);
+    
+    /* New dark gradients with transparency */
+    --gradient-card-bg: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6));
+    --gradient-button-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(99, 102, 241, 0.8));
+    --gradient-section-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.8));
+    
+    /* Animation variables */
+    --grid-angle: 65deg;
+    --cell-size: 60px;
+    --opacity: 0.5;
+    --light-line: gray;
+    --dark-line: gray;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 28% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 215 28% 6%;
+
+    --secondary: 215 28% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 28% 10%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 215 28% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 15%;
+    --input: 215 28% 12%;
+    --ring: 217 91% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom animations for hero component */
+@keyframes grid {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Custom utility classes */
+.animate-grid {
+  animation: grid 15s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out;
+}
+
+.font-geist {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+  font-variation-settings: 'opsz' 32;
+}
+
+/* Dark theme enhancements */
+.dark {
+  color-scheme: dark;
+}
+
+/* Smooth hover effects */
+.hover-scale {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Dark blue gradient utilities */
+.bg-gradient-card {
+  background: var(--gradient-card-bg);
+}
+
+.bg-gradient-button {
+  background: var(--gradient-button-bg);
+}
+
+.bg-gradient-section {
+  background: var(--gradient-section-bg);
+}
+
+.bg-gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+}
+
+.bg-gradient-dark-blue {
+  background: var(--gradient-dark-blue);
+}
+
+/* Backdrop blur and transparency effects */
+.backdrop-blur-dark {
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.glass-effect {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
