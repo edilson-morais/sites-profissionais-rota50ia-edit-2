@@ -1,14 +1,22 @@
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <header className="fixed top-0 w-full backdrop-blur-dark border-b border-blue-800/30 z-50">
+  
+  return (
+    <header className="fixed top-0 w-full backdrop-blur-dark border-b border-blue-800/30 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Rota50IA</span>
+              <img 
+                src="/lovable-uploads/90a3a1a7-339b-4b5d-b0bb-565a2def81c7.png" 
+                alt="Equipe Rota50IA" 
+                className="h-8 w-auto object-contain"
+              />
             </div>
           </div>
           
@@ -50,5 +58,6 @@ export const Header = () => {
             </div>
           </div>}
       </div>
-    </header>;
+    </header>
+  );
 };
