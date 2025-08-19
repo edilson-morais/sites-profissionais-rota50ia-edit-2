@@ -5,11 +5,7 @@ export const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4 flex items-center">
-              <img 
-                src="/lovable-uploads/07aabacc-9139-42c4-942f-cc59bedef980.png" 
-                alt="Equipe Rota50IA Logo" 
-                className="h-20 w-auto object-contain"
-              />
+              <img src="/lovable-uploads/2470a09f-5cd2-4f41-8f92-433a78629e4b.png" alt="Equipe Rota50IA Logo" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-blue-200/80 mb-6 max-w-md">
               Fazemos sites profissionais que colocam sua empresa em destaque no Google e ajudam mais clientes a te encontrar online.
@@ -53,9 +49,7 @@ export const Footer = () => {
         
         <div className="py-6 border-t border-blue-800/30">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-blue-200/70 text-sm">
-              © 2024 WebPro. Todos os direitos reservados.
-            </p>
+            <p className="text-blue-200/70 text-sm">© 2025 Rota50IA. Todos os direitos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="https://politica-de-privacidade.rota50ia.com/" className="text-blue-200/70 hover:text-blue-400 text-sm transition-colors">
                 Política de Privacidade
