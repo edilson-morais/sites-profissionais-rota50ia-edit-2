@@ -6,9 +6,9 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4 flex items-center">
               <img 
-                src="/lovable-uploads/90a3a1a7-339b-4b5d-b0bb-565a2def81c7.png" 
+                src="/lovable-uploads/07aabacc-9139-42c4-942f-cc59bedef980.png" 
                 alt="Equipe Rota50IA Logo" 
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <p className="text-blue-200/80 mb-6 max-w-md">

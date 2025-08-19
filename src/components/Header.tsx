@@ -13,9 +13,9 @@ export const Header = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img 
-                src="/lovable-uploads/90a3a1a7-339b-4b5d-b0bb-565a2def81c7.png" 
+                src="/lovable-uploads/07aabacc-9139-42c4-942f-cc59bedef980.png" 
                 alt="Equipe Rota50IA" 
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
             </div>
           </div>
