@@ -18,10 +18,10 @@ const portfolioItems = [{
   image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
   description: "Site responsivo com cardápio digital e delivery online."
 }, {
-  title: "Advocacia Digital",
-  category: "Jurídico",
-  image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-  description: "Portal jurídico com blog e área de clientes."
+  title: "Cursos Online",
+  category: "Educação",
+  image: "/lovable-uploads/41d967af-bef2-40d1-aad3-142c3d7780cd.png",
+  description: "Plataforma de ensino com área de alunos e certificados."
 }, {
   title: "Academia Fitness",
   category: "Esportes",
