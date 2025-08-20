@@ -1,19 +1,20 @@
+
 const stats = [
   {
-    number: "500+",
-    label: "Sites Criados"
+    number: "+100.000",
+    label: "Acessos Gerados para Clientes"
   },
   {
-    number: "98%",
-    label: "Clientes Satisfeitos"
+    number: "+1 Milhão",
+    label: "Visualizações em Sites Criados"
   },
   {
-    number: "24h",
-    label: "Tempo de Resposta"
+    number: "+30.000/mês",
+    label: "Acessos Mensais Ativos"
   },
   {
-    number: "5+",
-    label: "Anos de Experiência"
+    number: "Tráfego Orgânico",
+    label: "Crescimento de até 70% nos Clientes"
   }
 ]
 

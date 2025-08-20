@@ -1,9 +1,9 @@
+
 import { HeroSectionDemo } from "@/components/ui/hero-section-demo"
 import { Header } from "@/components/Header"
 import { Features } from "@/components/Features"
 import { Stats } from "@/components/Stats"
 import { Portfolio } from "@/components/Portfolio"
-import { Pricing } from "@/components/Pricing"
 import { Testimonials } from "@/components/Testimonials"
 import { FAQ } from "@/components/FAQ"
 import { Contact } from "@/components/Contact"
@@ -18,7 +18,6 @@ const Index = () => {
         <Features />
         <Stats />
         <Portfolio />
-        <Pricing />
         <Testimonials />
         <FAQ />
         <Contact />

@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
@@ -78,8 +79,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(({
               {/* Top tag with glass effect */}
               
               
-              {/* Main title with blue gradients - Updated mobile size to 35px */}
-              <h1 className="text-[35px] md:text-[3.5rem] lg:text-[5.5rem] xl:text-[5.5rem] font-bold tracking-tight leading-tight">
+              {/* Main title with blue gradients - Decreased desktop size by 10px */}
+              <h1 className="text-[35px] md:text-[2.5rem] lg:text-[4.5rem] xl:text-[4.5rem] font-bold tracking-tight leading-tight">
                 <span className="text-white">{title}</span>
                 <br />
                 <span className="text-white">{subtitle.regular}</span>
