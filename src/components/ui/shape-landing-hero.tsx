@@ -35,7 +35,7 @@ function ElegantShape({
             transition={{
                 duration: 2.4,
                 delay,
-                ease: [0.23, 0.86, 0.39, 0.96],
+                ease: [0.23, 0.86, 0.39, 0.96] as any,
                 opacity: { duration: 1.2 },
             }}
             className={cn("absolute", className)}
@@ -88,15 +88,15 @@ function HeroGeometric({
 }) {
     const fadeUpVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: (i: number) => ({
+        visible: {
             opacity: 1,
             y: 0,
             transition: {
                 duration: 1,
-                delay: 0.5 + i * 0.2,
-                ease: [0.25, 0.4, 0.25, 1],
+                delay: 0.5,
+                ease: "easeOut",
             },
-        }),
+        },
     };
 
     return (
@@ -153,10 +153,10 @@ function HeroGeometric({
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
-                        custom={0}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ delay: 0.2 }}
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/[0.03] border border-blue-500/[0.08] mb-8 md:mb-12"
                     >
                         <Circle className="h-2 w-2 fill-blue-500/80" />
@@ -166,10 +166,10 @@ function HeroGeometric({
                     </motion.div>
 
                     <motion.div
-                        custom={1}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ delay: 0.4 }}
                     >
                         <h1 className="text-[35px] md:text-[2.5rem] lg:text-[4rem] xl:text-[4rem] font-bold mb-6 md:mb-8 tracking-tight leading-tight">
                             <span className="text-white">
@@ -186,10 +186,10 @@ function HeroGeometric({
                     </motion.div>
 
                     <motion.div
-                        custom={2}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ delay: 0.6 }}
                         className="pt-4"
                     >
                         <a href={ctaHref} className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-button rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900">
